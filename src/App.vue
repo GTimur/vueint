@@ -1,21 +1,23 @@
 <template>
   <div id="app" class="wrapper">
     <div class="header">
-      <div class="row inner">
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-10">
-          <mainmenu></mainmenu>
+      <div class="inner">
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10">           
+            <mainmenu></mainmenu>
+          </div>
         </div>
       </div>
     </div>
     <div class="content">
       <div class="inner">
-        <div class="raw scrollable">
+        <div class="row scrollable">
           <div class="col-md-1">
           </div>
           <div class="col-md-10">
-            <div class="page myDiv">
+          <div class="page">
               <router-view></router-view>
             </div>
           </div>
@@ -23,27 +25,23 @@
       </div>
     </div>
     <div class="footer">
-      <div class="row inner">
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-10 bg">
-          Nice Vuejs Application
-          <br> Version 1.0 (C) 2017
+      <div class="inner">
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10 bg">
+            Nice Vuejs Application
+            <br> Version 1.0 (C) 2017
+          </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
-Vue.use(BootstrapVue)
 // import VueImg from 'v-img'
 // Vue.use(VueImg)
-import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
 import MainMenu from '@/components/MainMenu'
 import Hello from '@/components/Hello'
 
@@ -76,18 +74,11 @@ export default {
 }
 
 .page {
-  display: block;
-  text-align: center;
+  /* display: block;
+  /*text-align: center;*/
   font-size: 16px;
   color: #eee;
   border: 1px solid white;
-}
-
-.myDiv {
-  height: 100%;
-  max-height: calc(100vh - 50px);
-  width: 100%;
-  background-color: #FF0000;
 }
 
 html,
